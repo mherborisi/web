@@ -6,11 +6,9 @@
         </head>
         <body>
             <h1 style="text-align:center">DevOps Training Course</h1>
-            <h2>Введи свои данные:</h2>
-                <form action="display.php" method="POST">
-                <p>Введите имя: <input type="text" name="firstname" /></p>
-                <p>Введите фамилию: <input type="text" name="lastname" /></p>
-                <input type="submit" value="Отправить">
-                </form>
+            <form action="input_text.php" method="post">
+            Name: <input type="text" name="name"><br>
+            </form>
         </body>
 </html>
+

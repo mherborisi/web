@@ -8,8 +8,16 @@
             <h1 style="text-align:center">DevOps Training Course</h1>
             <form action="input_text.php" method="post">
             Name: <input type="text" name="text_input"><br>
-                  <input type="submit" name="SUBMIT">
+                  <input type="submit">
             </form>
+
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit">
+            </form>
+
+            
         </body>
 </html>
 

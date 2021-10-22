@@ -10,7 +10,7 @@
     // Check connection
         if ($conn->connect_error)
         {
-            die("Connection failed: ".$conn->connect_error);
+            echo "connect_error"
         }
 
         //$sqlquery = "INSERT INTO table VALUES('John', 'Doe', 'john@example.com')"

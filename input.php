@@ -15,7 +15,7 @@
                     . mysqli_connect_error());
             }
             $input =  $_POST['input'];
-            echo $sql = "INSERT INTO table  VALUES (null,'".$input."')";
+            $sql = "INSERT INTO php_table  VALUES (null,'".$input."')";
 
             if(mysqli_query($conn, $sql))
             {

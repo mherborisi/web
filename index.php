@@ -7,7 +7,7 @@
         <body>
             <h1 style="text-align:center">DevOps Training Course</h1>
             <form action="input.php" method="post">
-            Name: <input type="text" name="text_input">
+            Input_Text: <input type="text" name="input">
                   <input type="submit">
             </form>
                 <br>

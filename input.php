@@ -1,17 +1,38 @@
-<?php
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
-    $dbname = "database_name";
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Insert Page page</title>
+</head>
+  
+<body>
+    <center>
+        <?php
+            $conn = mysqli_connect("localhost", "root", "", "staff");
+            if($conn === false)
+            {
+                die("ERROR: Could not connect. " 
+                    . mysqli_connect_error());
+            }
+            $input =  $_REQUEST['input'];
+            $sql = "INSERT INTO college  VALUES ('$input')";
 
-    // Create connection
-    $conn = new mysqli($servername,$username, $password, $dbname);
+            if(mysqli_query($conn, $sql))
+            {
+                echo "<h3>data stored in a database successfully." 
+                    . " Please browse your localhost php my admin" 
+                    . " to view the updated data</h3>"; 
+      
+                echo nl2br("\n$first_name\n $last_name\n "
+                    . "$gender\n $address\n $email");
+            } else{
+                echo "ERROR: Hush! Sorry $sql. " 
+                    . mysqli_error($conn);
+            }
+            mysqli_close($conn);
 
-    // Check connection
-        if ($conn->connect_error)
-        {
-            echo "connect_error"
-        }
+        ?>
+    </center>
+</body>
 
-        //$sqlquery = "INSERT INTO table VALUES('John', 'Doe', 'john@example.com')"
-?>
+</html>

@@ -25,6 +25,6 @@ if (isset($_POST["submit"])) {
 //     $uploadOk = 0;
 //   }
   
-      
+?> 
   </body>
 </html>

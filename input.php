@@ -8,14 +8,14 @@
 <body>
     <center>
         <?php
-            $conn = mysqli_connect("localhost", "root", "", "staff");
+            $conn = mysqli_connect("localhost", "user", "123456", "php_db");
             if($conn === false)
             {
                 die("ERROR: Could not connect. " 
                     . mysqli_connect_error());
             }
-            $input =  $_REQUEST['input'];
-            $sql = "INSERT INTO college  VALUES ('$input')";
+            $input =  $_POST['input'];
+            $sql = "INSERT INTO table  VALUES (null,'$input')";
 
             if(mysqli_query($conn, $sql))
             {
